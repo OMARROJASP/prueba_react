@@ -8,7 +8,11 @@ export const Country =({country})=> {
                 </div>
                 <div>
                     <p>Capital: <span>{country.name}</span></p>
-                    <p>Language: <span>{country.languages.name}</span></p>
+                   <ul className="list-disc pl-6">
+                        {country.languages.map((state) => (
+                            <li key={state.name}>{state.name}</li>
+                        ))}
+                    </ul>
                     <p>Capital: <span>{country.capital}</span></p>
                     <p>Currency: <span>{country.currency}</span></p>
                 </div>
